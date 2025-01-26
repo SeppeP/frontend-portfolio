@@ -36,4 +36,27 @@
       color: #ffd27b;
     }
   }
+
+  @media screen and (max-width: 488px) {
+    .c-intro {
+      &-content {
+        border-left: none;
+        text-align: center;
+        margin: 5rem auto 10rem;
+        padding: 0;
+        max-width: initial;
+      }
+
+      &-name {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: normal;
+      }
+
+      &-description {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
 </style>

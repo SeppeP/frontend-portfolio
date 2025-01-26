@@ -2,10 +2,8 @@
   <div class="c-skills">
     <h2 class="c-skills-title">I have experience in</h2>
     <div class="c-skills-list">
-      <div v-for="skill in skills" class="c-skills-logo-wrapper">
-        <img :src="getUrl(skill)" :alt="skill + ' logo'"
-             class="c-skills-logo"/>
-      </div>
+      <img v-for="skill in skills" :src="getUrl(skill)" :alt="skill + ' logo'"
+           class="c-skills-logo"/>
     </div>
   </div>
 </template>
@@ -40,16 +38,29 @@
 
     &-logo {
       transition: .3s;
-      height: 7.5rem;
-
-      &-wrapper {
-        padding: 2rem 3rem;
-        height: 8rem;
-        width: 8rem;
-      }
+      height: 6rem;
+      margin: 1rem 2rem;
 
       &:hover {
-        height: 8rem;
+        scale: 1.1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 488px) {
+    .c-skills {
+      &-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      &-list {
+        max-width: 80%;
+      }
+
+      &-logo {
+        height: 3rem;
+        margin: 0.5rem 1rem;
       }
     }
   }

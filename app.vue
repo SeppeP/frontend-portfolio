@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <CHeader/>
+<!--    <CHeader/>-->
     <CIntro/>
     <CSkills/>
     <CExperiences/>

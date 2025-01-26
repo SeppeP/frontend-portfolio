@@ -20,4 +20,17 @@
       margin-bottom: 3rem;
     }
   }
+
+  @media screen and (max-width: 488px) {
+    .c-experiences {
+      padding: 2.5rem 0;
+      margin: 0 auto;
+      max-width: 80%;
+
+      &-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
 </style>
