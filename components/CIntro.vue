@@ -5,16 +5,26 @@
       <h1 class="c-intro-name">Seppe Parys</h1>
       <p class="c-intro-description">I’m a Belgian <span class="c-intro-role">front-end developer</span> who’s passionate about creating useful websites and webapps for everyone to use.</p>
     </div>
+    <CIntroVisual/>
   </div>
 </template>
 
 <style lang="scss">
   .c-intro {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "text visual";
+    max-width: 60rem;
+    margin: 8rem auto;
+
     &-content {
+      grid-area: text;
       border-left: 1px solid white;
-      margin: 4.5rem auto 12.5rem;
-      max-width: 80%;
-      padding: 0  2rem 5.5rem;
+      padding: 0 2rem 5.5rem;
+    }
+
+    .c-intro-visual {
+      grid-area: visual;
     }
 
     &-greeting {
@@ -29,7 +39,6 @@
 
     &-description {
       line-height: 2rem;
-      max-width: 30%;
     }
 
     &-role {
@@ -37,8 +46,20 @@
     }
   }
 
+  @media screen and (max-width: 1483px) {
+    .c-intro {
+      grid-template-columns: 1fr;
+      grid-template-areas: "visual"
+                            "text";
+    }
+  }
+
   @media screen and (max-width: 488px) {
     .c-intro {
+      grid-template-columns: 1fr;
+      grid-template-areas: "visual"
+                            "text";
+
       &-content {
         border-left: none;
         text-align: center;

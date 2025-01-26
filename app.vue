@@ -9,7 +9,9 @@
 </template>
 
 <script setup lang="ts">
-
+  useHead({
+    title: 'Seppe Parys'
+  })
 </script>
 
 <style lang="scss">

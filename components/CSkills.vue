@@ -47,7 +47,7 @@
     }
   }
 
-  @media screen and (max-width: 488px) {
+  @media screen and (max-width: 690px) {
     .c-skills {
       &-title {
         font-size: 2rem;

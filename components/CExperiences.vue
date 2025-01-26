@@ -1,6 +1,6 @@
 <template>
   <div class="c-experiences">
-    <h2 class="c-experiences-title">My experiences</h2>
+    <h2 class="c-experiences-title">My work experiences</h2>
     <CExperienceItem v-for="experience in experiences" :experience/>
   </div>
 </template>
@@ -21,7 +21,7 @@
     }
   }
 
-  @media screen and (max-width: 488px) {
+  @media screen and (max-width: 1030px) {
     .c-experiences {
       padding: 2.5rem 0;
       margin: 0 auto;

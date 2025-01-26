@@ -57,4 +57,14 @@
       padding-left: 0.5rem;
     }
   }
+
+  @media screen and (max-width: 1030px) {
+    .c-experience-item {
+
+      &-description {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+      }
+    }
+  }
 </style>
