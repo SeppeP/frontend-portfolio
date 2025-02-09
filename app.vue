@@ -5,6 +5,7 @@
     <CIntro/>
     <CSkills/>
     <CExperiences/>
+    <CProjects/>
   </div>
 </template>
 
