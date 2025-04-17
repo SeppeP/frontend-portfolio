@@ -1,11 +1,15 @@
 <template>
   <div>
     <NuxtRouteAnnouncer />
-<!--    <CHeader/>-->
-    <CIntro/>
-    <CSkills/>
-    <CExperiences/>
-    <CProjects/>
+    <CHeader/>
+    <main>
+      <CIntro/>
+      <CSkills/>
+      <CProjects/>
+      <CExperiences/>
+      <CAboutMe/>
+    </main>
+    <CFooter/>
   </div>
 </template>
 
@@ -15,17 +19,8 @@
   })
 </script>
 
-<style lang="scss">
-  html, body {
-    * {
-      padding: 0;
-      margin: 0;
-    }
-  }
-
+<style>
   body {
-    background-color:  #294d77;
-    color: #f6f6f6;
-    font-family: Roboto, sans-serif;
+      //position: absolute;
   }
 </style>

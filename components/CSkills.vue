@@ -1,66 +1,46 @@
 <template>
   <div class="c-skills">
-    <h2 class="c-skills-title">I have experience in</h2>
-    <div class="c-skills-list">
-      <img v-for="skill in skills" :src="getUrl(skill)" :alt="skill + ' logo'"
-           class="c-skills-logo"/>
+    <div v-for="skill in skills" class="c-skills-item">
+      <span>{{ skill }}</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  const skills = ['html', 'css', 'typescript', 'vue', 'react', 'nuxt', 'blender', 'threejs'];
-
-  function getUrl(skill: string): string {
-    return `skills/${skill}.png`;
-  }
+  const skills = ['HTML', 'CSS', 'Typescript', 'Vue', 'React', 'Nuxt', 'Blender', 'Three.js'];
 </script>
 
 <style lang="scss">
   .c-skills {
-    background-color: #f6f6f6;
-    color: #294d77;
-    text-align: center;
-    padding: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(265, 265, 265, 0.4);
+    font-size: 1.25rem;
 
-    &-title {
-      font-size: 4rem;
-      margin-bottom: 3rem;
-    }
+    flex-wrap: wrap;
 
-    &-list {
+    &-item {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 60rem;
-      margin: 0 auto;
-    }
-
-    &-logo {
-      transition: .3s;
-      height: 6rem;
-      margin: 1rem 2rem;
+      align-items: center;
+      height: $section-gap;
+      padding: 0 1.5rem;
+      transition: .2s;
 
       &:hover {
-        scale: 1.1;
+        color: #f1f1f1;
+        background-color: #707070;
       }
     }
   }
 
-  @media screen and (max-width: 690px) {
+  @media screen and (max-width: 1030px) {
     .c-skills {
-      &-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-      }
+      font-size: 1rem;
 
-      &-list {
-        max-width: 80%;
-      }
-
-      &-logo {
-        height: 3rem;
-        margin: 0.5rem 1rem;
+      &-item {
+        padding: 0 1rem;
+        height: calc($section-gap / 2);
       }
     }
   }
