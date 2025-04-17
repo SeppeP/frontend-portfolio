@@ -1,13 +1,8 @@
 <template>
   <header class="c-header">
     <div class="c-header-content">
-      <p class="c-header-name">Seppe Parys</p>
-
-      <nav>
-        <a href="">Skills</a>
-        <a href="">Projects</a>
-        <a href="">Contact me</a>
-      </nav>
+      <p class="c-header-name">SeppeParys</p>
+      <CContact/>
     </div>
   </header>
 </template>
@@ -18,22 +13,42 @@
 
 <style lang="scss">
   .c-header {
-    background-color: white;
-    filter: drop-shadow(0 8px 8px rgba(0,0,0,.25));
-    color: #0c0c0c;
-    padding: 2rem 0;
+    border: solid 1px $orange-highlight;
+    border-radius: 1rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 1rem 1.5rem;
 
     &-content {
-      padding: 1rem 5rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     &-name {
-      font-size: 3rem;
-      color: #0c0c0c;
-      font-weight: 600;
+      font-size: 2rem;
+      font-weight: bold;
+
+      &::before {
+        content: '<';
+        color: $green-highlight;
+      }
+
+      &::after {
+        content: '/>';
+        color: $green-highlight;
+      }
     }
+  }
+
+  @media screen and (max-width: 1030px) {
+    .c-header {
+      max-width: 75%;
+
+      &-name {
+        font-size: 1.5rem;
+      }
+    }
+
   }
 </style>

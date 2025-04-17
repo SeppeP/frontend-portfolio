@@ -1,0 +1,101 @@
+@use "variables" as *;
+
+@font-face {
+  font-family: 'inria-sans';
+  src: url('/fonts/inria/InriaSansRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'inria-sans';
+  src: url('/fonts/inria/InriaSansBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin codeStyle($tag) {
+  &::before, &::after {
+    color: $green-highlight;
+  }
+
+  &::before {
+    content: '<#{$tag}> ';
+  }
+
+  &::after {
+    content: ' </#{$tag}> ';
+  }
+}
+
+html, body {
+  * {
+    padding: 0;
+    margin: 0;
+
+    &::selection {
+      background: rgba($green-highlight, 0.3);
+    }
+  }
+}
+
+body {
+  background-color: $body-color;
+  color: #f6f6f6;
+  font-family: 'inria-sans', sans-serif;
+}
+
+h2 {
+  @include codeStyle('h2');
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 1029px) {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+span.codeStyle {
+  @include codeStyle('span');
+}
+
+p.codeStyle {
+  @include codeStyle('p');
+
+  @media (max-width: 1029px) {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.green-highlight {
+  color: $green-highlight;
+}
+
+.orange-highlight {
+  color: $orange-highlight;
+}
+
+.appearable {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.appearable.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+

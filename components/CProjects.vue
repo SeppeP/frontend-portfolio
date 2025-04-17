@@ -1,10 +1,10 @@
 <template>
-  <div class="c-projects">
-    <h2 class="c-projects-title">Featured work</h2>
-    <div class="c-projects-list">
-      <CProject v-for="project in projects" :project/>
-    </div>
-  </div>
+  <CSection class="c-projects">
+      <h2 class="c-projects-title">Featured work</h2>
+      <div class="c-projects-list">
+        <CProject v-for="project in projects" :project/>
+      </div>
+  </CSection>
 </template>
 
 <script setup lang="ts">
@@ -14,34 +14,25 @@
 
 <style lang="scss">
   .c-projects {
-    background-color: #f6f6f6;
-    color: #294d77;
-    padding: 2.5rem 0;
-
-    &-title {
-      font-size: 4rem;
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
     &-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 60rem;
-      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(318px, calc(318px + 3.5rem)));
+      gap: 3.5rem 2rem;
     }
   }
 
-  @media screen and (max-width: 690px) {
+  @media screen and (max-width: 1030px) {
     .c-projects {
       &-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
+        text-align: center;
       }
 
       &-list {
-        max-width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        //flex-flow: column;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
