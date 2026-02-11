@@ -9,8 +9,8 @@
     <a v-if="false" href="https://www.youtube.com/@perynal" class="c-contact-link">
       <font-awesome-icon icon="fa-brands fa-youtube"/>
     </a>
-    <a href="/renders/stinkfly.png" download="SeppeParysCV" target="_blank" class="c-contact-link">
-      Download CV
+    <a href="/SeppeParysCV.pdf" target="_blank" class="c-contact-link">
+      Open CV
     </a>
   </div>
 </template>
