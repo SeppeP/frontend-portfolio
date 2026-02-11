@@ -1,13 +1,16 @@
 <template>
   <div class="c-contact">
-    <a href="https://github.com/SeppeP">
-      <font-awesome-icon icon="fa-brands fa-github" class="c-contact-icon"/>
+    <a href="https://github.com/SeppeP" class="c-contact-link">
+      <font-awesome-icon icon="fa-brands fa-github"/>
     </a>
-    <a href="mailto:seppe.parys@gmail.com">
-      <font-awesome-icon icon="fa-solid fa-envelope" class="c-contact-icon"/>
+    <a href="mailto:seppe.parys@gmail.com"  class="c-contact-link">
+      <font-awesome-icon icon="fa-solid fa-envelope"/>
     </a>
-    <a v-if="false" href="https://www.youtube.com/@perynal">
-      <font-awesome-icon icon="fa-brands fa-youtube" class="c-contact-icon"/>
+    <a v-if="false" href="https://www.youtube.com/@perynal" class="c-contact-link">
+      <font-awesome-icon icon="fa-brands fa-youtube"/>
+    </a>
+    <a href="/renders/stinkfly.png" download="SeppeParysCV" target="_blank" class="c-contact-link">
+      Download CV
     </a>
   </div>
 </template>
@@ -31,7 +34,7 @@
       color: #f6f6f6;
     }
 
-    &-icon {
+    &-link {
       transition: color 0.3s;
 
       &:hover {
